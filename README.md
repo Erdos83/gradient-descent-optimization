@@ -12,27 +12,37 @@ Gradient descent is an iterative optimization method for minimizing differentiab
 
 The algorithms are implemented using NumPy and evaluated on synthetic data with known regression parameters.
 
+
 ## Mathematical Formulation
 
-Consider the linear regression model
+Consider the linear regression model:
 
-y = Xθ + ε,
+$$
+y = X\theta + \varepsilon
+$$
 
-where X is the design matrix, θ is the parameter vector, and ε represents random noise.
+where $X$ is the design matrix, $\theta$ is the parameter vector, and $\varepsilon$ represents random noise.
 
 We minimize the mean squared error objective:
 
-J(θ) = (1 / 2n) ||Xθ - y||².
+$$
+J(\theta) = \frac{1}{2n}\|X\theta-y\|_2^2
+$$
 
 Its gradient is:
 
-∇J(θ) = (1 / n) Xᵀ(Xθ - y).
+$$
+\nabla J(\theta) = \frac{1}{n}X^\top(X\theta-y)
+$$
 
 The general gradient descent update is:
 
-θₖ₊₁ = θₖ - α∇J(θₖ),
+$$
+\theta_{k+1} = \theta_k - \alpha\nabla J(\theta_k)
+$$
 
-where α is the learning rate.
+where $\alpha$ is the learning rate.
+  
 
 ## Implemented Algorithms
 
